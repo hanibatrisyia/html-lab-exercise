@@ -26,11 +26,49 @@
 			<label for="dob">Date of Birth:</label>
 			<input type="date" id="dob" name="dob"><br><br>
 
+			<label for="year">Year of Study:</label>
+			<select name="year" id="year">
+				<optgroup label="Undergraduate">
+					<option value="y1">Year 1</option>
+					<option value="y2">Year 2</option>
+					<option value="y3">Year 3</option>
+					<option value="y4">Year 4</option>
+				</optgroup>
+				<optgroup label="Postgraduate">
+					<option value="master">Master</option>
+					<option value="phd">PHD</option>
+				</optgroup>
+			</select><br><br>
+
+			<label for="transport">Transportation to Faculty:</label><br>
+			<input type="radio" id="car" name="transport" value="Car">
+			<label for="car">Car</label><br>
+			<input type="radio" id="motor" name="transport" value="Motorcycle">
+			<label for="motor">Motorcycle</label><br>
+			<input type="radio" id="public" name="transport" value="Public Transport">
+			<label for="public">Public Transport</label><br>
+			<input type="radio" id="bike" name="transport" value="Bicycle">
+			<label for="bike">Bicycle</label><br>
+			<input type="radio" id="walk" name="transport" value="Walking">
+			<label for="walk">Walking</label><br><br>
+
+			<label for="favsub">Your Favourite Subject:</label><br>
+			<input type="checkbox" id="sub1" name="sub1" value="CrossPlatform">
+			<label for="sub1">Cross-Platform Application</label><br>
+			<input type="checkbox" id="sub2" name="sub2" value="AppDev">
+			<label for="sub2">Application Development Project</label><br>
+			<input type="checkbox" id="sub3" name="sub3" value="SoftDesign">
+			<label for="sub3">Software Design & Architecture</label><br>
+			<input type="checkbox" id="sub4" name="sub4" value="BizIntelligence">
+			<label for="sub4">Business Intelligence</label><br><br>
+
 			<label for="rate">Rate My Page (1-5):</label>
 			<input type="range" id="rate" name="rate" min="0" max="5"><br><br>
 
 			<label for="feedback">Feedback:</label>
 			<input type="textarea" id="feedback" name="feedback"><br><br>
+
+			<input type="submit" value="Submit">
 		</fieldset>
 	</form>
 </body>
