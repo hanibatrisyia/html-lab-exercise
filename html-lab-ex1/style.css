@@ -9,13 +9,14 @@ CSS LAB EXERCISE 1B*/
 /*custom properties*/
 :root {
 	/*primary colours - dominant colours*/
-	--color-primary: 	#1a1a2e;
-	--color-secondary: 	#16213e;
+	--color-primary: 	#0b1833; /*dark blue*/
+	--color-secondary: 	#96b7fa; /*light blue*/
 	/*accent colours - highlight colours, contrast primary*/
-	--color-accent: 	#e8d5b7;
-	--color-accent2: 	#ff9cb8;
+	--color-accent: 	#ffb5d6; /*light pink*/
+	--color-accent2: 	#e80067; /*hot pink*/
 	/*neutral greys - background and text colours*/
-	--color-text:		#1a1a1a;
+	--color-textb:		#1a1a1a;
+	--color-textw:		#ffffff;
 	--color-muted: 		#666666;
 	--color-surface:	#f5f4f0;
 
@@ -24,9 +25,9 @@ CSS LAB EXERCISE 1B*/
 	--font-heading:		'Playfair Display', serif;
 
 	/*spacing*/
-	--space-sm:			0.5rem;
-	--space-md:			1.5rem;
-	--space-lg:			3rem;
+	--space-sm:			0.5rem; /*small spacing*/
+	--space-md:			1.5rem; /*medium*/
+	--space-lg:			3rem; /*large*/
 }
 
 /*reset block - box sizing rules*/
@@ -45,4 +46,117 @@ body {
 	font-size: 1.6rem;
 	color: var(--color-text);
 	background-color: var(--color-surface);
+}
+
+/*typography*/
+h1, h2, h3, h4 {
+	font-family: var(--font-heading);
+	color: var(--color-primary);
+	line-height: 1.5;
+}
+
+h1 { font-size: 4.0rem; }
+h2 { font-size: 3.0rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 2.0rem; }
+
+p {
+	font-size: 1.6rem;
+	line-height: 1.8;
+	color:var(--color-textb);
+}
+
+small {
+	font-size: 1.2rem;
+	color: var(--color-muted);
+}
+
+blockquote {
+	font-size: 1.8rem;
+	font-style: italic;
+	color: var(--color-muted);
+	padding: var(--space-md) var(--space-lg);
+	border-left: 4px solid var(--color-accent);
+	margin: var(--space-md) 0;
+}
+
+code, caption {
+	font-size: 1.4rem;
+	line-height: 1.2;
+	color: var(--color-muted);
+}
+
+header {
+	background-color: var(--color-primary);
+	padding: var(--space-lg) var(--space-md);
+	color: var(--color-accent);
+
+	display: flex; /*enable flexbox*/
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--space-lg);
+}
+
+nav {
+	background-color: var(--color-secondary);
+	padding: var(--space-sm) var(--space-md);
+	color: var(--color-accent2);
+
+	/*task 3*/
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav a{
+	color:var(--color-accent);
+	font-size: 1.6rem;
+	padding: var(--space-sm) var(--space-md);
+	border-radius: 4px;
+	transition: color 0.2s, background-color 0.2s;
+	border-bottom: 3px solid transparent;
+}
+
+nav ul {
+	display: flex;
+	flew-wrap: wrap;
+	gap: var(--space-lg);
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	background-color: var(--color-secondary);
+	padding: var(--space-sm) var(--space-md);
+	color: var(--color-accent2);
+}
+
+footer {
+	background-color: var(--color-primary);
+	padding: var(--space-lg) var(--space-md);
+	color: var(--color-accent);
+}
+
+a:link { color: var(--color-accent2); }
+a:visited { color: var(--color-muted); }
+a:hover { color: var(--color-accent); text-decoration: underline }
+a:active { color: var(--color-accent2); opacity: 0.7; }
+
+/*apply border radius to buttons, cards, nav*/
+.btn {
+	border-radius: 4px;
+	padding: var(--space-md) var(--space-md);
+}
+
+
+.card {
+	border-radius: ;
+}
+
+.nav-link {
+	border-radius: ;
+	box-shadow: ;
 }
