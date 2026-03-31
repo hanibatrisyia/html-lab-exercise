@@ -2,9 +2,16 @@
 Matric No.: A24CS0079
 CSS LAB EXERCISE 1B*/
 
+/*TASK 1*/
 /*import font*/
 @import url('https://fonts.googleapis.com');
 
+/*	===========================================
+	BREAKPOINTS
+	mobile-first base: 320px and up (default)
+	tablet:		@media (min-width: 600px)
+	desktop:	@media (min-width:1024px)
+	===========================================*/
 
 /*custom properties*/
 :root {
@@ -48,6 +55,7 @@ body {
 	background-color: var(--color-surface);
 }
 
+/*TASK 2*/
 /*typography*/
 h1, h2, h3, h4 {
 	font-family: var(--font-heading);
@@ -97,6 +105,7 @@ header {
 	gap: var(--space-lg);
 }
 
+/*TASK 3*/
 nav {
 	background-color: var(--color-secondary);
 	padding: var(--space-sm) var(--space-md);
@@ -164,6 +173,7 @@ a:active { color: var(--color-accent2); opacity: 0.7; }
 	box-shadow: ;
 }
 
+/*TASK 4*/
 /*card grid (index.html)*/
 .card-grid {
 	display: grid;
@@ -189,3 +199,55 @@ a:active { color: var(--color-accent2); opacity: 0.7; }
 	transform: translate(-4px);
 	transition: transform 0.2s;
 }
+
+/*TASK 5*/
+/*-- base styles (mobile) --*/
+.card-grid {
+	display: grid;
+	grid-template-columns: 1fr; /*single column*/
+	gap: var(--space-md);
+}
+
+header {
+	flex-direction: column; /*vertical stack*/
+	text-align: center;
+}
+
+nav-ul {
+	flex-direction: column; /*nav vertical stack*/
+}
+
+.page-layout {
+	grid-template-columns: 1fr; /*no sidebar*/
+}
+
+/*-- base styles (tablet) --*/
+@media (min-width: 600px) {
+	.card-grid {
+		grid-template-columns: repeat(2, 1fr); /*2 columns*/
+	}
+
+	header {
+		flex-direction: row; /*side by side*/
+	}
+
+	nav ul {
+		flex-direction: row; /*horizontal nav*/
+	}
+}
+
+/*-- base styles (desktop) --*/
+@media (min-width: 1024px) {
+	.card-grid {
+		grid-template-columns: repeat(3, 1fr); /*3 columns*/
+	}
+
+	.page-layout {
+		grid-template-columns: 1fr 280px; /*sidebar layout activates*/
+	}
+}
+
+/*notes: it "inherits" every style from the smaller section
+unless you specifically write a new rule to override it*/
+
+/*TASK 6*/
