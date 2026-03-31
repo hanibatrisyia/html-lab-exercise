@@ -63,7 +63,7 @@ h4 { font-size: 2.0rem; }
 p {
 	font-size: 1.6rem;
 	line-height: 1.8;
-	color:var(--color-textb);
+	color:var(--color-text);
 }
 
 small {
@@ -153,10 +153,39 @@ a:active { color: var(--color-accent2); opacity: 0.7; }
 
 
 .card {
-	border-radius: ;
+	background: var(--color-accent);
+	padding: var(--space-md);
+	border-radius: 8px;
+	box-shadow: 10px 10px 5px var(--color-accent2);
 }
 
 .nav-link {
 	border-radius: ;
 	box-shadow: ;
+}
+
+/*card grid (index.html)*/
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: var(--space-md);
+}
+
+/*sidebar layout (about.html)*/
+.page-layout {
+	display: grid;
+	grid-template-columns: 1fr 280px;
+	gap: var(--space-lg);
+	align-items: start;
+}
+
+/*span full width of grid (featured card)*/
+.card-grid .card--featured {
+	grid-column: span 2;
+}
+
+/*card hover lift effect*/
+.card:hover {
+	transform: translate(-4px);
+	transition: transform 0.2s;
 }
