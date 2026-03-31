@@ -2,10 +2,6 @@
 Matric No.: A24CS0079
 CSS LAB EXERCISE 1B*/
 
-/*TASK 1*/
-/*import font*/
-@import url('https://fonts.googleapis.com');
-
 /*	===========================================
 	BREAKPOINTS
 	mobile-first base: 320px and up (default)
@@ -13,11 +9,16 @@ CSS LAB EXERCISE 1B*/
 	desktop:	@media (min-width:1024px)
 	===========================================*/
 
+/*TASK 1*/
+/*import font*/
+@import url('https://fonts.googleapis.com');
+
 /*custom properties*/
 :root {
 	/*primary colours - dominant colours*/
 	--color-primary: 	#0b1833; /*dark blue*/
 	--color-secondary: 	#96b7fa; /*light blue*/
+	--color-third: 		#cfdeff; /*lighter blue*/
 	/*accent colours - highlight colours, contrast primary*/
 	--color-accent: 	#ffb5d6; /*light pink*/
 	--color-accent2: 	#e80067; /*hot pink*/
@@ -251,3 +252,47 @@ nav-ul {
 unless you specifically write a new rule to override it*/
 
 /*TASK 6*/
+/*style form*/
+input, textarea, select {
+	padding: var(--space-sm) var(--space-md);
+	border: 2px solid var(--color-muted);
+	border-radius: 4px;
+	font-family: var(--font-body);
+}
+
+form { background-color: var(--color-third) }
+
+/*visible focus*/
+input:focus, textarea:focus, select:focus {
+	box-shadow: 0 0 0 3px var(--color-accent);
+	border-color: var(--color-primary);
+}
+
+/*submit button*/
+button[type="submit"] {
+	background-color: var(--color-secondary);
+	transition: background-color 0.2s;
+}
+button[type="submit"]:hover {
+	background-color: var(--color-accent);
+}
+button[type="submit"]:active {
+	transform: scale(0.97);
+}
+
+/*pseudo-element*/
+blockquote::before {
+	content: '"';
+	font-size: 6rem;
+	color: var(--color-accent);
+}
+
+/*table alternanting row colours*/
+tbody tr:nth-child(even) {
+	background-color: var(--color-third);
+}
+thead { background-color: var(--color-secondary); }
+
+/*remove top border of first and bottom border of last item in list*/
+nav ul li:first-child a { border-top: none; }
+nav ul li:last-child a { border-bottom: none; }
